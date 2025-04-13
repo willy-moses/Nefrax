@@ -1,0 +1,33 @@
+{
+  "cli": {
+    "version": ">= 3.0.0"
+  },
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk",
+        "withoutCredentials": true
+      },
+      "distribution": "internal",
+      "env": {
+        "EXPO_USE_LEGACY_PEER_DEPS": "1"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "ENV": "production",
+        "EXPO_USE_LEGACY_PEER_DEPS": "1"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./credentials/google-service-account.json"
+      }
+    }
+  }
+}
